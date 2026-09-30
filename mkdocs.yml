@@ -1,0 +1,75 @@
+site_name: Apuntes de Ingeniería en Minas
+site_description: Tutoriales paso a paso con teoría de los ramos de Ingeniería en Minas (UNAB).
+site_url: https://aliaaar.github.io/apuntes-mineria/
+repo_url: https://github.com/aliaaar/apuntes-mineria
+repo_name: aliaaar/apuntes-mineria
+
+docs_dir: docs
+
+theme:
+  name: material
+  language: es
+  icon:
+    logo: material/pickaxe
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: brown
+      accent: amber
+      toggle:
+        icon: material/weather-night
+        name: Cambiar a modo oscuro
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: brown
+      accent: amber
+      toggle:
+        icon: material/weather-sunny
+        name: Cambiar a modo claro
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.indexes
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - toc.follow
+
+plugins:
+  - search:
+      lang: es
+  - tags
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.keys
+  - pymdownx.mark
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+nav:
+  - Inicio: index.md
+  - ICMI222 · Evaluación de yacimientos:
+      - icmi222/index.md
+      - Lab · Modelo de bloques, dominios y estimación ID2: icmi222/lab-modelo-bloques-id2.md
+  - Glosario: glosario.md
+  - Etiquetas: etiquetas.md
+  - Cómo agregar un tutorial: como-agregar.md
