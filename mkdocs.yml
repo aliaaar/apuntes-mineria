@@ -80,6 +80,17 @@ nav:
           - PPT 05 · Dominios, contactos y compositación: icmi222/clases/05-dominios-compositacion.md
           - PPT 06 · Variograma experimental: icmi222/clases/06-variograma-experimental.md
           - PPT 07 · Modelamiento de variogramas: icmi222/clases/07-modelamiento-variogramas.md
+      - Cuaderno de clases:
+          - Semana 1 · Inicio del curso: icmi222/cuaderno/01-inicio.md
+          - Semana 2 · Geoestadística, sondajes y QA/QC: icmi222/cuaderno/02-geoestadistica-qaqc.md
+          - Semana 3 · AED en Vulcan: icmi222/cuaderno/03-aed-vulcan.md
+          - Semana 4 · AED bivariado: icmi222/cuaderno/04-aed-bivariado.md
+          - Semana 6 · Fundamentos de geoestadística: icmi222/cuaderno/06-fundamentos.md
+          - Semana 6 · Lab modelo de bloques e ID: icmi222/cuaderno/06-lab-modelo-bloques.md
+          - Semana 7 · Dominios y compositación: icmi222/cuaderno/07-dominios-compositacion.md
+          - Semana 8 · Variograma experimental: icmi222/cuaderno/08-variograma.md
+          - Semana 9 · Modelamiento variográfico: icmi222/cuaderno/09-modelamiento.md
+          - Resumen de conceptos: icmi222/cuaderno/10-resumen.md
   - Glosario: glosario.md
   - Etiquetas: etiquetas.md
   - Cómo agregar un tutorial: como-agregar.md
