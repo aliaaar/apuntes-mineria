@@ -3,6 +3,8 @@
 Tutoriales paso a paso con teoría de los ramos de Ingeniería en Minas (UNAB), publicados con
 [MkDocs Material](https://squidfunk.github.io/mkdocs-material/) en GitHub Pages.
 
+**Sitio:** https://aliaaar.github.io/apuntes-mineria/
+
 ## Estructura
 
 ```
