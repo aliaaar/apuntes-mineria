@@ -182,8 +182,6 @@ Pasando los compósitos a los ejes del modelo (rotados 36°):
 
 !!! bug "Errores comunes"
     - **As source desmarcado**: Vulcan recompósita a 1 m y el cálculo se vuelve lento sin ganar nada.
-    - **La ventana no cabe en la pantalla** y no se ven los botones: ++alt+space++ → ++m++ → flecha ↑ → ++enter++.
-    - **Output Name mal escrito** (en clase quedó `10` en vez de `102`).
 
 ---
 
