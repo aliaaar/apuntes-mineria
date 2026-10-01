@@ -69,7 +69,17 @@ nav:
   - Inicio: index.md
   - ICMI222 · Evaluación de yacimientos:
       - icmi222/index.md
-      - Lab · Modelo de bloques, dominios y estimación ID2: icmi222/lab-modelo-bloques-id2.md
+      - Tutoriales:
+          - Lab · Modelo de bloques, dominios y estimación ID2: icmi222/lab-modelo-bloques-id2.md
+      - Apuntes de clase:
+          - PPT 00 · Presentación del curso: icmi222/clases/00-presentacion.md
+          - PPT 01 · Introducción a la geoestadística: icmi222/clases/01-introduccion.md
+          - PPT 02 · AED I, estadísticas y gráficos: icmi222/clases/02-aed-estadisticas-basicas.md
+          - PPT 03 · AED II, de la descripción a la decisión: icmi222/clases/03-aed-decisiones.md
+          - PPT 04 · Variable regionalizada y función aleatoria: icmi222/clases/04-variable-regionalizada.md
+          - PPT 05 · Dominios, contactos y compositación: icmi222/clases/05-dominios-compositacion.md
+          - PPT 06 · Variograma experimental: icmi222/clases/06-variograma-experimental.md
+          - PPT 07 · Modelamiento de variogramas: icmi222/clases/07-modelamiento-variogramas.md
   - Glosario: glosario.md
   - Etiquetas: etiquetas.md
   - Cómo agregar un tutorial: como-agregar.md

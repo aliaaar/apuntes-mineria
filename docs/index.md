@@ -14,9 +14,9 @@ Cada tutorial explica **qué hacer** (menús, parámetros, valores reales) y **p
 
 ## Ramos
 
-| Ramo | Nombre | Tutoriales |
+| Ramo | Nombre | Contenido |
 |---|---|---|
-| [ICMI222](icmi222/index.md) | Evaluación de yacimientos (geoestadística) | 1 |
+| [ICMI222](icmi222/index.md) | Evaluación de yacimientos (geoestadística) | 1 tutorial · 8 apuntes de clase |
 
 ## Estructura de cada tutorial
 
