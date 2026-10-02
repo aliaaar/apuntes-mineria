@@ -92,6 +92,15 @@ nav:
           - Semana 8 · Variograma experimental: icmi222/cuaderno/08-variograma.md
           - Semana 9 · Modelamiento variográfico: icmi222/cuaderno/09-modelamiento.md
           - Resumen de conceptos: icmi222/cuaderno/10-resumen.md
+  - Cómo interpretar gráficos:
+      - interpretacion/index.md
+      - Histograma: interpretacion/histograma.md
+      - Box plot: interpretacion/box-plot.md
+      - Gráfico de probabilidad: interpretacion/probabilidad.md
+      - Dispersión y correlación: interpretacion/dispersion.md
+      - Gráfico Q-Q: interpretacion/qq.md
+      - Perfil de contacto: interpretacion/perfil-contacto.md
+      - Variograma: interpretacion/variograma.md
   - Glosario: glosario.md
   - Etiquetas: etiquetas.md
   - Cómo agregar un tutorial: como-agregar.md

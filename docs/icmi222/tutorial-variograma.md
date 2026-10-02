@@ -232,6 +232,7 @@ Estas dos distancias definen el **search radius** y el **lag size**.
       y **no se interpretan** (regla de los 30 pares y de la mitad del campo).
     - Después se calculan variogramas en las direcciones **principal, semi-principal y menor**, y se
       ajusta un modelo a cada uno: ver [modelamiento](clases/07-modelamiento-variogramas.md#como-ajustar-un-modelo-paso-a-paso).
+    - Para sacar conclusiones del resultado, ver [cómo interpretar un variograma](../interpretacion/variograma.md).
 
 ## Errores comunes
 

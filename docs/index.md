@@ -11,6 +11,8 @@ Cada tutorial explica **qué hacer** (menús, parámetros, valores reales) y **p
   por software (*Vulcan*) o por menú (*Block Model Slice*).
 - **[Etiquetas](etiquetas.md)**: todos los tutoriales agrupados por ramo, software y tema.
 - **[Glosario](glosario.md)**: definiciones cortas de los conceptos que se repiten entre ramos.
+- **[Cómo interpretar gráficos](interpretacion/index.md)**: qué mirar en un histograma, box plot,
+  gráfico de probabilidad, Q-Q, perfil de contacto o variograma, y qué conclusión sacar.
 
 ## Ramos
 
