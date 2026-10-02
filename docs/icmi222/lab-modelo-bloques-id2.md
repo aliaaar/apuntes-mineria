@@ -76,6 +76,22 @@ flowchart TD
 
 ![Variables](img/lab-modelo-bloques/02-variables.png)
 
+!!! question "¿Por qué se hace cada cosa?"
+    - **Autofit en vez de escribir el origen a mano:** Vulcan calcula el origen y la extensión a partir
+      de los datos cargados, así ningún compósito queda fuera de la caja. A mano es fácil equivocarse
+      en una coordenada y dejar sondajes afuera sin darse cuenta.
+    - **Bearing 36°:** Autofit gira la caja para alinearla con la nube de datos. Una caja alineada con
+      el cuerpo tiene menos bloques vacíos en las esquinas.
+    - **Bloques de 20 m:** con bloques de 10 m, el mismo volumen tendría **448.800 bloques** en vez de
+      56.100 (ocho veces más), con archivos y tiempos de cálculo mucho mayores. Además, un bloque muy
+      chico frente a la malla de sondajes no gana precisión: solo aparenta detalle.
+    - **`dominio` como Name (texto):** un dominio es una **categoría**. Si fuera número, el software
+      podría promediar "101" con "102" y dar "101,5", que no significa nada.
+    - **Valores por defecto −99 y `none`:** distinguen "sin información" de "ley cero" (ver el recuadro
+      de abajo).
+    - **Index model:** crea un índice que hace mucho más rápido leer y escribir bloques en las
+      etapas siguientes.
+
 !!! note "Teoría: qué es un modelo de bloques"
     El modelo de bloques **discretiza** el yacimiento en celdas donde se guardan atributos
     (ley, dominio, densidad). El tamaño de bloque se elige según:
@@ -113,6 +129,11 @@ Pasando los compósitos a los ejes del modelo (rotados 36°):
 | Y (dirección 306°) | 0,4 – 461 m | 600 m | ~139 m |
 | Z | 0,2 – 836 m | 1100 m | ~264 m |
 
+!!! question "¿Por qué comprobarlo con números y no solo mirando?"
+    En pantalla, la perspectiva hace que la cara de arriba de la caja se vea más grande que la de
+    abajo, y un sondaje puede parecer adentro sin estarlo. Pasar los compósitos a los ejes del modelo
+    da una respuesta exacta: todo dato debe quedar entre 0 y el largo de la caja en X, Y y Z.
+
 !!! note "Teoría: por qué validar la extensión"
     Un sondaje que queda fuera del modelo es información perdida. *Autofit* pone el origen en el
     mínimo de los datos y **redondea hacia arriba** la extensión, por eso sobra un margen sin
@@ -149,6 +170,22 @@ Pasando los compósitos a los ejes del modelo (rotados 36°):
 | R112 | 0 | 0 | 0 | 400 | 50 | 50 | 112 |
 
 ![Dominios en el editor](img/lab-modelo-bloques/04-implicito-dominios.png)
+
+!!! question "¿Por qué se configura así el implícito?"
+    - **Categorical y no Grade:** los dominios son categorías (R101, R102…), no números. El modelo
+      categórico decide **a qué dominio pertenece** cada punto; uno de ley interpolaría valores.
+    - **RTTEXT como campo:** es el código de dominio que el geólogo asignó a cada compósito, que es lo
+      que el implícito tiene que extender al espacio.
+    - **As source:** los compósitos ya tienen un largo regular. Sin esta opción, Vulcan los
+      recompósita a 1 m, multiplica por cinco los puntos y el cálculo se hace mucho más lento sin
+      ganar nada.
+    - **Límite por topografía:** sobre la superficie no hay roca. Sin este límite, los sólidos se
+      extienden hacia el aire.
+    - **Un elipsoide de tendencia por dominio:** le indica al RBF hacia dónde se alarga cada cuerpo.
+      Sin él, supone que es igual en todas las direcciones y los cuerpos salen redondeados, sin la
+      forma geológica real (por ejemplo, el R101 inclinado −70°).
+    - **Smoothing y fine adjustment:** suavizan los contactos para que no salgan escalonados,
+      respetando los puntos de control.
 
 ### Qué genera
 
@@ -202,6 +239,15 @@ Pasando los compósitos a los ejes del modelo (rotados 36°):
 
 ![Corte N314](img/lab-modelo-bloques/09-corte-n314.png)
 
+!!! question "¿Por qué un corte y por qué en Northing 314?"
+    - **Un corte y no el modelo entero:** con los 56.100 bloques en pantalla solo se ve la cara
+      exterior, que es casi toda del dominio que rodea a los demás (R102). Un corte deja ver el
+      interior.
+    - **Northing 314:** es la mediana de la coordenada Y de los compósitos de R101. Un corte ahí pasa
+      por el núcleo de alta ley, que es el dominio que más interesa validar.
+    - **Compósitos y bloques coloreados por dominio:** la validación consiste justamente en comparar
+      el color del compósito con el del bloque donde cae.
+
 ### Colores usados
 
 | Dominio | Compósitos (leyenda `RT`) | Bloques (leyenda `RT_ROCKTYPE`) |
@@ -247,6 +293,25 @@ Pasando los compósitos a los ejes del modelo (rotados 36°):
 | Inverse Distance | **Normalize** → 1 / 0,5 / 0,25 · potencia `2` |
 | Sample Count | mínimo 2 · máximo 16 |
 | Block Selection | **Use Bounding Triangulation** `RT_101.00t` |
+
+!!! question "¿Por qué estos parámetros?"
+    - **Filtro `RTTEXT = R101`:** solo entran muestras del dominio. Si se usaran todas, los bloques
+      del núcleo rico tomarían muestras del halo y saldrían subestimados (y al revés).
+    - **Bounding triangulation `RT_101.00t`:** solo se estiman los bloques que están dentro del sólido
+      del dominio. Junto con el filtro, esto es un **contacto duro**.
+    - **Elipsoide rotado 180 / 0 / −70:** busca muestras en la misma dirección en que se alarga el
+      cuerpo, donde las leyes se parecen más.
+    - **Normalize:** convierte los radios del elipsoide (400 / 200 / 100) en factores de distancia
+      (1 / 0,5 / 0,25), para que la ponderación siga la misma anisotropía que la búsqueda.
+    - **Potencia 2:** es el punto medio de uso habitual. Con potencia 1 el modelo queda muy suavizado;
+      con potencias altas se acerca al método de polígonos, con "manchas" alrededor de cada sondaje.
+    - **Mínimo 2 muestras:** con una sola muestra el bloque copiaría su valor. Si no hay dos, el
+      bloque queda en −99, que es más honesto que inventar una ley.
+    - **Máximo 16 muestras:** con demasiadas muestras entran algunas lejanas y poco representativas,
+      el bloque se suaviza de más y el cálculo es más lento.
+    - **Discretización 4 × 4 × 1:** se estima el promedio del volumen del bloque y no un solo punto en
+      su centro (soporte). En Z se dejó 1 punto, el valor usado en clase; con bloques muy altos
+      conviene subirlo.
 
 ### Resultado (reporte `icmi222_id2_101.bef_report`)
 

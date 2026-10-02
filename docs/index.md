@@ -22,7 +22,8 @@ Cada tutorial explica **qué hacer** (menús, parámetros, valores reales) y **p
 
 1. **Objetivo y datos de entrada**: con qué se trabaja y qué se espera obtener.
 2. **Flujo general**: diagrama de las etapas.
-3. **Etapas**: pasos en el software, tabla de parámetros, recuadro de teoría y errores comunes.
+3. **Etapas**: pasos en el software, tabla de parámetros, recuadro **¿Por qué?** (la razón de cada acción),
+   recuadro de teoría y errores comunes.
 4. **Resultados y observaciones críticas**: lo que conviene comentar en un informe.
 5. **Preguntas de repaso**: para estudiar antes de pruebas.
 

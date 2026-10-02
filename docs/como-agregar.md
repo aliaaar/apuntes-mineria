@@ -47,6 +47,10 @@ GitHub Actions construye y publica el sitio en uno o dos minutos.
 ## Elementos útiles de Markdown
 
 ```markdown
+!!! question "¿Por qué se hace cada cosa?"
+    Cada paso de un tutorial lleva este recuadro: la razón de cada acción o
+    parámetro, y qué pasaría si se hiciera distinto.
+
 !!! note "Teoría: título"
     Texto indentado con 4 espacios.
 

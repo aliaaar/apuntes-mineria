@@ -38,8 +38,12 @@ flowchart LR
 |---|---|
 | | |
 
+!!! question "¿Por qué se hace cada cosa?"
+    - **Acción o parámetro:** qué pasaría si no se hiciera, o si se usara otro valor.
+    - Si se puede, con un número del propio dataset (por ejemplo, cuánto cambia un resultado).
+
 !!! note "Teoría: concepto"
-    Por qué se hace este paso y qué concepto hay detrás.
+    El concepto general detrás del paso, con enlace al apunte de clase.
 
 !!! bug "Errores comunes"
     - Lo que salió mal y cómo se arregló.
