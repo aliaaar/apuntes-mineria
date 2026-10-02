@@ -29,9 +29,9 @@ Hay tres tipos de páginas:
 | 4 | 24/08 | AED II: soporte, desagrupamiento, capping, correlación | [PPT 03](clases/03-aed-decisiones.md) | [notas](cuaderno/04-aed-bivariado.md) | pendiente |
 | 5 | 31/08 | **Solemne 1** | — | — | — |
 | 6 | 07/09 | Variable regionalizada y estacionariedad | [PPT 04](clases/04-variable-regionalizada.md) | [notas](cuaderno/06-fundamentos.md) · [lab](cuaderno/06-lab-modelo-bloques.md) | [modelo de bloques e ID2](lab-modelo-bloques-id2.md) |
-| 7 | 14/09 | Dominios, contactos y compositación | [PPT 05](clases/05-dominios-compositacion.md) | [notas](cuaderno/07-dominios-compositacion.md) | — |
-| 8 | 21/09 | Variograma experimental | [PPT 06](clases/06-variograma-experimental.md) | [notas](cuaderno/08-variograma.md) | pendiente |
-| 9 | 28/09 | Modelamiento de variogramas | [PPT 07](clases/07-modelamiento-variogramas.md) | [notas](cuaderno/09-modelamiento.md) | pendiente |
+| 7 | 14/09 | Dominios, contactos y compositación (taller de compositación: 21/09) | [PPT 05](clases/05-dominios-compositacion.md) | [notas](cuaderno/07-dominios-compositacion.md) | — |
+| 8 | 21/09 | Variograma experimental | [PPT 06](clases/06-variograma-experimental.md) | [notas](cuaderno/08-variograma.md) | [cómo generar un variograma](tutorial-variograma.md) |
+| 9 | 28/09 | Modelamiento de variogramas | [PPT 07](clases/07-modelamiento-variogramas.md) | [notas](cuaderno/09-modelamiento.md) | [cómo generar un variograma](tutorial-variograma.md) |
 | 10 | 05/10 | **Solemne 2** (variogramas) | — | [resumen de conceptos](cuaderno/10-resumen.md) | — |
 
 Los conceptos que se repiten entre clases están resumidos en el [glosario](../glosario.md).

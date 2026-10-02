@@ -71,6 +71,7 @@ nav:
       - icmi222/index.md
       - Tutoriales:
           - Lab · Modelo de bloques, dominios y estimación ID2: icmi222/lab-modelo-bloques-id2.md
+          - Cómo generar un variograma en Vulcan: icmi222/tutorial-variograma.md
       - Apuntes de clase:
           - PPT 00 · Presentación del curso: icmi222/clases/00-presentacion.md
           - PPT 01 · Introducción a la geoestadística: icmi222/clases/01-introduccion.md
