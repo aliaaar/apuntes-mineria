@@ -33,5 +33,6 @@ Hay tres tipos de páginas:
 | 8 | 21/09 | Variograma experimental | [PPT 06](clases/06-variograma-experimental.md) | [notas](cuaderno/08-variograma.md) | [cómo generar un variograma](tutorial-variograma.md) |
 | 9 | 28/09 | Modelamiento de variogramas | [PPT 07](clases/07-modelamiento-variogramas.md) | [notas](cuaderno/09-modelamiento.md) | [cómo generar un variograma](tutorial-variograma.md) |
 | 10 | 05/10 | **Solemne 2** (variogramas) | — | [resumen de conceptos](cuaderno/10-resumen.md) | — |
+| Proyecto | 28/10 → 16/11 | **Proyecto final** (base GEOL902): AED, modelo de bloques, implícito y tipo de roca | — | — | [preparación del modelo](proyecto-final-preparacion.md) |
 
 Los conceptos que se repiten entre clases están resumidos en el [glosario](../glosario.md).
